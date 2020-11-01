@@ -61,7 +61,11 @@ code {
   color: #FFFFFF;
   background-color: #FF8B37;
   font-size: 1.2rem;
-  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.button a {
+  color: #FFFFFF;
   text-decoration: none;
 }
 
@@ -79,6 +83,21 @@ code {
   padding: 80px;
   padding-bottom: 120px;
   box-sizing: border-box;
+}
+
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 12px;
+  }
+
+  .wrapper {
+    padding: 16px;
+    padding-bottom: 50px;
+  }
+
+  .main {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 2000px) {

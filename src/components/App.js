@@ -1,13 +1,16 @@
 import React from 'react';
 import '../styles/App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+// HashRouter is obsolete. We need to use BrowserRouter
+// instead, but HashRouter needed for correct work
+// of gh-pages
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import Start from './Start';
 import Game from './Game';
 import End from './End';
 
 function App() {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <Switch>
         <Route exact path="/" component={Start} />
         <Route exact path="/game" component={Game} />
