@@ -15,7 +15,6 @@ export function BorderItem({ children, Border, ...attrs }) {
 
 export function Menu({ title, caption, btnText, ...attrs }) {
   return (
-    <div>
       <div className="wrapper menu__wrapper">
         <div className="menu__wrapper_image-wrapper">
           <img src="hand.png" alt="hand" className="menu__wrapper__image" />
@@ -26,12 +25,13 @@ export function Menu({ title, caption, btnText, ...attrs }) {
             <h1 className="menu__wrapper__title">{title}</h1>
           </div>
           <div >
-            <button {...attrs} className="button">
-              <Link to="/game">{btnText}</Link>
-            </button>
+            <Link to="/game">
+              <button {...attrs} className="button">
+                {btnText}
+              </button>
+            </Link>
           </div>
         </div>
       </div>
-    </div>
   );
 }

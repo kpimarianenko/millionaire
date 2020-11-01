@@ -1,8 +1,7 @@
 import React from 'react';
 import '../styles/App.css';
-// HashRouter is obsolete. We need to use BrowserRouter
-// instead, but HashRouter needed for correct work
-// of gh-pages
+// HashRouter is obsolete. We should use BrowserRouter instead,
+// but gh-pages need a HashRouter to work correctly.
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import Start from './Start';
 import Game from './Game';
