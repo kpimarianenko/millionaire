@@ -1,0 +1,141 @@
+{
+  "maxAnswerQuantity": 4,
+  "multipleAnswers": false,
+  "afterAnswerDelay": 100,
+  "beforeNextLevelDelay": 100,
+  "questions": [
+      {
+          "question": "How many countries are part of Scandinavia?",
+          "answers": [
+              "2",
+              "3",
+              "4",
+              "5"
+          ],
+          "correctAnswer": 1,
+          "price": 500
+
+      },
+      {
+          "question": "Which animal has the largest eyes?",
+          "answers": [
+              "Elephant",
+              "Giraffe",
+              "Owl",
+              "Ostrich"
+          ],
+          "correctAnswer": 3,
+          "price": 1000
+      },
+      {
+          "question": "Which human lung holds more air?",
+          "answers": [
+              "Left",
+              "Right",
+              "Same",
+              "Individually"
+          ],
+          "correctAnswer": 1,
+          "price": 2000
+      },
+      {
+          "question": "Which of the Canary Islands is the largest?",
+          "answers": [
+              "Tenerife",
+              "Lobos",
+              "Alegranza",
+              "Lanzarote"
+          ],
+          "correctAnswer": 0,
+          "price": 4000
+      },
+      {
+          "question": "Who wrote the Sistine Madonna?",
+          "answers": [
+              "Raphael Santi",
+              "Michelangelo",
+              "Leonardo da Vinci",
+              "Sandro Botticelli"
+          ],
+          "correctAnswer": 0,
+          "price": 8000
+      },
+      {
+          "question": "How long is the equator?",
+          "answers": [
+              "17,240km",
+              "40,075km",
+              "30,075km",
+              "38,890km"
+          ],
+          "correctAnswer": 1,
+          "price": 16000
+      },
+      {
+          "question": "What animal was the first parachutist?",
+          "answers": [
+              "Chicken",
+              "Pig",
+              "Dog",
+              "Cat"
+          ],
+          "correctAnswer": 3,
+          "price": 32000
+      },
+      {
+          "question": "What kind of animals are used to guard grain storage facilities in the UK?",
+          "answers": [
+              "Cocks",
+              "Pigs",
+              "Cats",
+              "Dogs"
+          ],
+          "correctAnswer": 2,
+          "price": 64000
+      },
+      {
+          "question": "In which country do the tarantella dance?",
+          "answers": [
+              "Spain",
+              "Argentina",
+              "France",
+              "Italy"
+          ],
+          "correctAnswer": 3,
+          "price": 125000
+      },
+      {
+          "question": "Which creature has the largest brain in relation to the body?",
+          "answers": [
+              "Ant",
+              "Blue whale",
+              "Beaver",
+              "Elephant"
+          ],
+          "correctAnswer": 0,
+          "price": 250000
+      },
+      {
+          "question": "What number means Roman XC?",
+          "answers": [
+              "190",
+              "70",
+              "90",
+              "900"
+          ],
+          "correctAnswer": 2,
+          "price": 500000
+      },
+      {
+          "question": "Which of the American states has the largest area?",
+          "answers": [
+              "Texas",
+              "Alaska",
+              "Florida",
+              "California"
+          ],
+          "correctAnswer": 1,
+          "price": 1000000
+      }
+  ]
+}

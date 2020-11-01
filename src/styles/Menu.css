@@ -1,0 +1,29 @@
+.menu__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.menu__wrapper-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu__wrapper__title {
+    font-size: 3.2rem;
+    font-weight: 600;
+    margin-bottom: 65px;
+}
+
+.menu__wrapper__caption {
+    color: #1C1C21;
+    opacity: 0.5;
+    font-size: 1.9rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.menu__wrapper__image {
+    width: 100%;
+    object-fit: contain;
+}

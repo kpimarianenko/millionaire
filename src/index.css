@@ -1,0 +1,112 @@
+small, p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+button:active, button:focus {
+  outline: none;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  max-width: 100vw;
+  width: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.main {
+  max-width: 100vw;
+  max-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.border {
+  width: 100%;
+  height: auto;
+  stroke: #D0D0D8;
+  fill: #FFFFFF;
+}
+
+.border-button {
+  cursor: pointer;
+}
+
+.border-item {
+  position: relative;
+  width: 100%;
+}
+
+.border-item__text {
+  font-size: 1.2rem;
+  margin: 0 12%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.button {
+  padding: 20px 120px;
+  border: none;
+  border-radius: 12px;
+  color: #FFFFFF;
+  background-color: #FF8B37;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #FFAC70;
+  transition: background-color 0.15s;
+}
+
+.button:active {
+  background-color: #E87928;
+  transition: background-color 0.15s;
+}
+
+.wrapper {
+  padding: 80px;
+  padding-bottom: 120px;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 2000px) {
+  html {
+      font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 2400px) {
+  html {
+      font-size: 26px;
+  }
+}
+
+@media screen and (min-width: 2800px) {
+  html {
+      font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 3200px) {
+  html {
+      font-size: 38px;
+  }
+}
+
+@media screen and (min-width: 3600px) {
+  html {
+      font-size: 44px;
+  }
+}
