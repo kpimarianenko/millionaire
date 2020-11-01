@@ -7,7 +7,7 @@ import End from './End';
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route exact path="/" component={Start} />
         <Route exact path="/game" component={Game} />
