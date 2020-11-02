@@ -1,9 +1,9 @@
 import React from 'react';
-import { Menu } from './Utils';
+import { Menu, numberWithCommas } from './Utils';
 
 function End(props) {
   const earnedMoneyNumber = props.location.state ? props.location.state.earnedMoney : 0;
-  const earnedMoney = earnedMoneyNumber.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  const earnedMoney = numberWithCommas(earnedMoneyNumber);
   const caption = 'Total score:';
   const title = `$${earnedMoney} earned`;
   const btnText = 'Try again';

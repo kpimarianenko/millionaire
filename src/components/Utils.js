@@ -35,3 +35,7 @@ export function Menu({ title, caption, btnText, ...attrs }) {
       </div>
   );
 }
+
+export function numberWithCommas(num) {
+  return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}

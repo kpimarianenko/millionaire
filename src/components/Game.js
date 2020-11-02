@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Redirect } from 'react-router-dom';
-import { BorderItem } from './Utils';
+import { BorderItem, numberWithCommas } from './Utils';
 import Answers from './Answers';
 import { ReactComponent as MoneyBorder } from '../moneyBorder.svg';
 import MenuButton from '../menuButton.svg';
@@ -78,7 +78,12 @@ function LevelPanel({ level, maxLevel }) {
 }
 
 function Level({ money, className, ...attrs }) {
-  return (<BorderItem Border={MoneyBorder} className={`level-panel__money ${className}`} {...attrs}>{`$${money}`}</BorderItem>);
+  return (<BorderItem
+    {...attrs}
+    Border={MoneyBorder}
+    className={`level-panel__money ${className}`}>
+    {`$${numberWithCommas(money)}`}
+  </BorderItem>);
 }
 
 function LevelPanelMobileButton() {
