@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import { BorderItem, numberWithCommas } from './Utils';
 import Answers from './Answers';
-import { ReactComponent as MoneyBorder } from '../moneyBorder.svg';
-import MenuButton from '../menuButton.svg';
+import { ReactComponent as MoneyBorder } from '../images/moneyBorder.svg';
+import MenuButton from '../images/menuButton.svg';
+import CloseButton from '../images/closeButton.svg';
 import { questions } from '../config.json';
 import '../styles/Game.css';
 
@@ -11,6 +12,7 @@ function Game() {
   const [level, setLevel] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(questions[level]);
   const [earnedMoney, setEarnedMoney] = useState(-1);
+  const [showMobilePanel, setShowMobilePanel] = useState(false);
 
   const redirectToFinal = (money) => {
     setEarnedMoney(money);
@@ -24,6 +26,8 @@ function Game() {
     }
   };
 
+  const showOrHideMobileMenu = () => setShowMobilePanel(!showMobilePanel);
+
   useEffect(() => {
     if (level >= 0 && level < questions.length) {
       setCurrentQuestion(questions[level]);
@@ -34,9 +38,14 @@ function Game() {
     <QuestionPanel
       level={level}
       item={currentQuestion}
+      showOrHideMobileMenu={showOrHideMobileMenu}
       increaseLevel={increaseLevel}
       redirectToFinal={redirectToFinal} />
-    <LevelPanel level={level} maxLevel={questions.length} />
+    <LevelPanel
+      level={level}
+      maxLevel={questions.length}
+      show={showMobilePanel}
+      showOrHideMobileMenu={showOrHideMobileMenu} />
   </div>) : (<Redirect to={{
     pathname: '/end',
     state: {
@@ -45,9 +54,9 @@ function Game() {
   }} />);
 }
 
-function QuestionPanel({ level, item, increaseLevel, redirectToFinal }) {
+function QuestionPanel({ level, item, increaseLevel, redirectToFinal, showOrHideMobileMenu }) {
   return (<div className="wrapper question-panel">
-    <LevelPanelMobileButton />
+    <CornerButton img={MenuButton} onClick={showOrHideMobileMenu} />
     <Question question={item.question} />
     <Answers
       price={level > 0 ? questions[level - 1].price : 0}
@@ -62,7 +71,7 @@ function Question({ question, ...attrs }) {
   return (<h3 className="question-panel__header" {...attrs}>{question}</h3>);
 }
 
-function LevelPanel({ level, maxLevel }) {
+function LevelPanel({ level, maxLevel, show, showOrHideMobileMenu }) {
   const levels = [];
   for (let i = 0; i < maxLevel; i += 1) {
     let className = '';
@@ -72,8 +81,11 @@ function LevelPanel({ level, maxLevel }) {
   }
   levels.reverse();
 
-  return (<div className="level-panel">
-    {levels}
+  return (<div className={show ? 'level-panel__wrapper show' : 'level-panel__wrapper'}>
+    <CornerButton img={CloseButton} onClick={showOrHideMobileMenu} />
+    <div className="level-panel">
+      {levels}
+    </div>
   </div>);
 }
 
@@ -86,10 +98,14 @@ function Level({ money, className, ...attrs }) {
   </BorderItem>);
 }
 
-function LevelPanelMobileButton() {
-  return (<div className="level-panel-button-wrapper">
-    <img src={MenuButton} alt="menuBtn" className="level-panel-button" />
+function CornerButton({ img, ...attrs }) {
+  return (<div className="corner-button-wrapper">
+    <img {...attrs} src={img} alt="menuBtn" className="corner-button" />
   </div>);
 }
+
+// function LevelPanelMobile() {
+//   return (<LevelPanel />);
+// }
 
 export default Game;

@@ -22,7 +22,7 @@
     grid-template-columns: repeat(2, 1fr);
 }
 
-.level-panel {
+.level-panel__wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,13 +87,13 @@
     margin-right: 8px;
 }
 
-.level-panel-button-wrapper {
+.corner-button-wrapper {
   display: none;
   flex-direction: row;
   justify-content: flex-end;
 }
 
-.level-panel-button {
+.corner-button {
   margin: 20px;
 }
 
@@ -106,18 +106,44 @@
     .game {
         grid-template-columns: 2fr 1fr;
     }
+
+    .wrapper {
+      padding: 20px;
+    }
 }
 
 @media screen and (max-width: 900px) {
+  .wrapper {
+    padding: 0;
+  }
+
   .game {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+  }
+
+  .level-panel__wrapper {
+    display: none;
+    background-color: #F5F5F7;
+    max-width: 100vw;
+    width: 100vw;
+    position: absolute;
+    min-height: 100vh;
+  }
+
+  .level-panel__wrapper.show {
+    display: flex;
   }
 
   .level-panel {
-    display: none;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
-  .level-panel-button-wrapper {
+  .corner-button-wrapper {
     display: flex;
   }
 
@@ -131,5 +157,52 @@
     margin: 16px;
     text-align: center;
     font-size: 1.45rem;
+  }
+
+  .level-panel__money .border-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  .level-panel__money .border-item {
+    width: fit-content;
+  }
+
+  .level-panel {
+    margin: auto;
+  }
+
+  .border {
+    max-height: 120px;
+    object-fit: cover;
+  }
+
+  .border-button {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .border-button .border-item {
+    width: fit-content;
+  }
+
+  .menu__wrapper__image {
+    max-height: 120px;
+  }
+}
+
+@media screen and (max-height: 560px) {
+  .level-panel__money {
+    font-size: 0.8rem;
+    margin-bottom: 2px;
+  }
+
+  .corner-button {
+    margin: 10px;
   }
 }

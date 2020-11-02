@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BorderItem } from './Utils';
-import { ReactComponent as ButtonBorder } from '../buttonBorder.svg';
+import { ReactComponent as ButtonBorder } from '../images/buttonBorder.svg';
 import config from '../config.json';
 
 function Answers({ answers, correctAnswer, price, increaseLevel, redirectToFinal }) {
