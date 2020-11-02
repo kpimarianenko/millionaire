@@ -98,18 +98,20 @@
 }
 
 @media screen and (max-width: 1250px) {
-    .question-panel__answers {
-        grid-row-gap: 16px;
-        grid-template-columns: 1fr;
-    }
-
     .game {
         grid-template-columns: 2fr 1fr;
     }
 
-    .wrapper {
-      padding: 20px;
+    .question-panel {
+      padding: 80px;
     }
+}
+
+@media screen and (max-width: 1100px) {
+  .question-panel__answers {
+    grid-template-columns: 1fr;
+    grid-row-gap: 16px;
+  }
 }
 
 @media screen and (max-width: 900px) {

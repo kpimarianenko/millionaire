@@ -1,28 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BorderItem } from './Utils';
 import { ReactComponent as ButtonBorder } from '../images/buttonBorder.svg';
 import config from '../config.json';
 
-function Answers({ answers, correctAnswer, price, increaseLevel, redirectToFinal }) {
+function Answers({ answers, correctAnswers, price, increaseLevel, redirectToFinal }) {
   const [isAnswered, setIsAnswered] = useState(false);
-
-  const highlightCorrectAnswers = () => {
-
-  };
+  const [isHighlight, setIsHighlight] = useState(false);
+  const highlightCorrectAnswers = () => setIsHighlight(!isHighlight);
 
   const newAnswers = [];
   for (let i = 0; i < config.maxAnswerQuantity && i < answers.length; i += 1) {
-    const letter = String.fromCharCode(i + 65); // 65-90 ASCII codes of uppercase Roman alphabet
+    let isCorrect;
+    if (config.multipleAnswers && Array.isArray(correctAnswers)) {
+      isCorrect = correctAnswers.includes(i);
+    } else {
+      isCorrect = i === correctAnswers;
+    }
+    const letter = String.fromCharCode(i + 65); // 65-90 ASCII codes of uppercase Latin alphabet
     const ans = <Answer
       price={price}
       increaseLevel={increaseLevel}
       redirectToFinal={redirectToFinal}
+      isHighlight={isHighlight}
       highlightCorrectAnswers={highlightCorrectAnswers}
       isAnswered={isAnswered}
       setIsAnswered={setIsAnswered}
       letter={letter}
       answer={answers[i]}
-      isCorrect={correctAnswer === i}
+      isCorrect={isCorrect}
       key={i} />;
     newAnswers.push(ans);
   }
@@ -35,18 +40,29 @@ function Answers({ answers, correctAnswer, price, increaseLevel, redirectToFinal
 function Answer({
   isAnswered, setIsAnswered, increaseLevel,
   redirectToFinal, answer, letter, highlightCorrectAnswers,
-  price, isCorrect, ...attrs
+  price, isCorrect, isHighlight, ...attrs
 }) {
+  const correctClassName = 'border-button-correct';
+  const wrongClassName = 'border-button-wrong';
+  const selectedClassName = 'border-button-selected';
+
   const [className, setClassName] = useState('');
+
+  useEffect(() => {
+    if (isHighlight && isCorrect) {
+      setClassName(correctClassName);
+    }
+  }, [isHighlight]);
 
   const answerOnQuestion = () => {
     let nextMove;
     if (isCorrect) {
-      setClassName('border-button-correct');
+      setClassName(correctClassName);
       nextMove = increaseLevel;
     } else {
-      setClassName('border-button-wrong');
+      setClassName(wrongClassName);
       nextMove = redirectToFinal;
+      highlightCorrectAnswers();
     }
     setTimeout(() => {
       setIsAnswered(false);
@@ -58,8 +74,7 @@ function Answer({
   const selectAnswer = () => {
     if (isAnswered) return;
     setIsAnswered(true);
-    setClassName('border-button-selected');
-
+    setClassName(selectedClassName);
     setTimeout(answerOnQuestion, config.afterAnswerDelay);
   };
 
