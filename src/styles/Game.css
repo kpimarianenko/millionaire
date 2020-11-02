@@ -113,7 +113,7 @@
 }
 
 @media screen and (max-width: 900px) {
-  .wrapper {
+  .question-panel {
     padding: 0;
   }
 
@@ -162,6 +162,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+  }
+
+  .question-panel__answers .border:hover {
+    stroke: #D0D0D8;
   }
 }
 
