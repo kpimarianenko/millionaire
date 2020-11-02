@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/millionaire/static/css/main.7b2c6bc4.chunk.css",
-    "main.js": "/millionaire/static/js/main.f1ffb00b.chunk.js",
-    "main.js.map": "/millionaire/static/js/main.f1ffb00b.chunk.js.map",
-    "runtime-main.js": "/millionaire/static/js/runtime-main.5cfdcfbf.js",
-    "runtime-main.js.map": "/millionaire/static/js/runtime-main.5cfdcfbf.js.map",
-    "static/js/2.551bb462.chunk.js": "/millionaire/static/js/2.551bb462.chunk.js",
-    "static/js/2.551bb462.chunk.js.map": "/millionaire/static/js/2.551bb462.chunk.js.map",
-    "static/js/3.3b4c9b74.chunk.js": "/millionaire/static/js/3.3b4c9b74.chunk.js",
-    "static/js/3.3b4c9b74.chunk.js.map": "/millionaire/static/js/3.3b4c9b74.chunk.js.map",
+    "main.css": "/millionaire/static/css/main.1818969b.chunk.css",
+    "main.js": "/millionaire/static/js/main.7824bc2f.chunk.js",
+    "main.js.map": "/millionaire/static/js/main.7824bc2f.chunk.js.map",
+    "runtime-main.js": "/millionaire/static/js/runtime-main.20e18002.js",
+    "runtime-main.js.map": "/millionaire/static/js/runtime-main.20e18002.js.map",
+    "static/js/2.6fdafd42.chunk.js": "/millionaire/static/js/2.6fdafd42.chunk.js",
+    "static/js/2.6fdafd42.chunk.js.map": "/millionaire/static/js/2.6fdafd42.chunk.js.map",
+    "static/js/3.b35d8dff.chunk.js": "/millionaire/static/js/3.b35d8dff.chunk.js",
+    "static/js/3.b35d8dff.chunk.js.map": "/millionaire/static/js/3.b35d8dff.chunk.js.map",
     "index.html": "/millionaire/index.html",
-    "static/css/main.7b2c6bc4.chunk.css.map": "/millionaire/static/css/main.7b2c6bc4.chunk.css.map",
-    "static/js/2.551bb462.chunk.js.LICENSE.txt": "/millionaire/static/js/2.551bb462.chunk.js.LICENSE.txt",
+    "static/css/main.1818969b.chunk.css.map": "/millionaire/static/css/main.1818969b.chunk.css.map",
+    "static/js/2.6fdafd42.chunk.js.LICENSE.txt": "/millionaire/static/js/2.6fdafd42.chunk.js.LICENSE.txt",
     "static/media/buttonBorder.e5914075.svg": "/millionaire/static/media/buttonBorder.e5914075.svg",
     "static/media/closeButton.2bd1d4bc.svg": "/millionaire/static/media/closeButton.2bd1d4bc.svg",
-    "static/media/menuButton.89a97b82.svg": "/millionaire/static/media/menuButton.89a97b82.svg",
-    "static/media/moneyBorder.b2070b06.svg": "/millionaire/static/media/moneyBorder.b2070b06.svg"
+    "static/media/levelBorder.b2070b06.svg": "/millionaire/static/media/levelBorder.b2070b06.svg",
+    "static/media/menuButton.89a97b82.svg": "/millionaire/static/media/menuButton.89a97b82.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.5cfdcfbf.js",
-    "static/js/2.551bb462.chunk.js",
-    "static/css/main.7b2c6bc4.chunk.css",
-    "static/js/main.f1ffb00b.chunk.js"
+    "static/js/runtime-main.20e18002.js",
+    "static/js/2.6fdafd42.chunk.js",
+    "static/css/main.1818969b.chunk.css",
+    "static/js/main.7824bc2f.chunk.js"
   ]
 }
