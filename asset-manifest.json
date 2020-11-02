@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/millionaire/static/css/main.f29aa047.chunk.css",
+    "main.css": "/millionaire/static/css/main.7151b3b9.chunk.css",
     "main.js": "/millionaire/static/js/main.36d1a162.chunk.js",
     "main.js.map": "/millionaire/static/js/main.36d1a162.chunk.js.map",
     "runtime-main.js": "/millionaire/static/js/runtime-main.5cfdcfbf.js",
@@ -10,7 +10,7 @@
     "static/js/3.3b4c9b74.chunk.js": "/millionaire/static/js/3.3b4c9b74.chunk.js",
     "static/js/3.3b4c9b74.chunk.js.map": "/millionaire/static/js/3.3b4c9b74.chunk.js.map",
     "index.html": "/millionaire/index.html",
-    "static/css/main.f29aa047.chunk.css.map": "/millionaire/static/css/main.f29aa047.chunk.css.map",
+    "static/css/main.7151b3b9.chunk.css.map": "/millionaire/static/css/main.7151b3b9.chunk.css.map",
     "static/js/2.e9a96d7d.chunk.js.LICENSE.txt": "/millionaire/static/js/2.e9a96d7d.chunk.js.LICENSE.txt",
     "static/media/buttonBorder.e5914075.svg": "/millionaire/static/media/buttonBorder.e5914075.svg",
     "static/media/closeButton.2bd1d4bc.svg": "/millionaire/static/media/closeButton.2bd1d4bc.svg",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.5cfdcfbf.js",
     "static/js/2.e9a96d7d.chunk.js",
-    "static/css/main.f29aa047.chunk.css",
+    "static/css/main.7151b3b9.chunk.css",
     "static/js/main.36d1a162.chunk.js"
   ]
 }
