@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Redirect } from 'react-router-dom';
-import { BorderItem, numberWithCommas } from './Utils';
+import { BorderItem, numberWithCommas, getQuestionsQuantity } from './Utils';
 import Answers from './Answers';
 import { ReactComponent as MoneyBorder } from '../images/moneyBorder.svg';
 import MenuButton from '../images/menuButton.svg';
 import CloseButton from '../images/closeButton.svg';
-import config, { questions, prices } from '../config.json';
+import { questions, prices } from '../config.json';
 import '../styles/Game.css';
 
 function Game() {
@@ -19,11 +19,11 @@ function Game() {
   };
 
   const increaseLevel = () => {
-    const questionsQuantity = Math.min(questions.length, config.maxQuestions);
+    const questionsQuantity = getQuestionsQuantity();
     if (level >= 0 && level < questionsQuantity - 1) {
       setLevel(level + 1);
     } else if (level === questionsQuantity - 1) {
-      redirectToFinal(prices[questionsQuantity - 1]);
+      redirectToFinal(prices[Math.min(questionsQuantity, prices.length) - 1]);
     }
   };
 
@@ -34,6 +34,10 @@ function Game() {
       setCurrentQuestion(questions[level]);
     }
   }, [level]);
+
+  useEffect(() => {
+    if (getQuestionsQuantity() <= 0) setEarnedMoney(0);
+  }, []);
 
   return earnedMoney < 0 ? (<div className="main game">
     <QuestionPanel
@@ -73,7 +77,7 @@ function Question({ question, ...attrs }) {
 
 function LevelPanel({ level, show, showOrHideMobileMenu }) {
   const levels = [];
-  const questionsQuantity = Math.min(questions.length, config.maxQuestions);
+  const questionsQuantity = getQuestionsQuantity();
   for (let i = 0; i < questionsQuantity; i += 1) {
     let className = '';
     if (i < level) className = 'level-panel__money-unactive';
@@ -107,9 +111,5 @@ function CornerButton({ img, ...attrs }) {
     <img {...attrs} src={img} alt="menuBtn" className="corner-button" />
   </div>);
 }
-
-// function LevelPanelMobile() {
-//   return (<LevelPanel />);
-// }
 
 export default Game;

@@ -2,8 +2,8 @@
   "maxQuestions": 12,
   "maxAnswerQuantity": 4,
   "multipleAnswers": true,
-  "afterAnswerDelay": 100,
-  "beforeNextLevelDelay": 100,
+  "afterAnswerDelay": 2500,
+  "beforeNextLevelDelay": 1500,
   "prices": [
     500,
     1000,
