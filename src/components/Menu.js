@@ -1,20 +1,8 @@
 import React from 'react';
 import '../styles/Menu.css';
 import { Link } from 'react-router-dom';
-import config, { questions } from '../config.json';
 
-export function BorderItem({ children, Border, ...attrs }) {
-  return (
-    <div {...attrs}>
-      <div className="border-item">
-        <Border className="border" />
-        <div className="border-item__text">{children}</div>
-      </div>
-    </div>
-  );
-}
-
-export function Menu({ title, caption, btnText, ...attrs }) {
+function Menu({ title, caption, btnText, ...attrs }) {
   return (
     <div className="wrapper menu__wrapper">
         <div className="menu__wrapper_image-wrapper">
@@ -37,10 +25,4 @@ export function Menu({ title, caption, btnText, ...attrs }) {
   );
 }
 
-export function numberWithCommas(num) {
-  return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-}
-
-export function getQuestionsQuantity() {
-  return Math.min(questions.length, config.maxQuestions);
-}
+export default Menu;

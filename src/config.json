@@ -1,9 +1,22 @@
 {
   "maxQuestions": 12,
   "maxAnswerQuantity": 4,
-  "multipleAnswers": true,
-  "afterAnswerDelay": 2500,
-  "beforeNextLevelDelay": 1500,
+  "multipleAnswers": false,
+  "strings": {
+    "start": {
+      "title": "Who wants to be a millionaire?",
+      "buttonText": "Start"
+    },
+    "end": {
+      "title": "${earnedMoney} earned",
+      "caption": "Total score:",
+      "buttonText": "Try again"
+    }
+  },
+  "delays": {
+    "afterAnswerDelay": 2500,
+    "beforeNextLevelDelay": 1500
+  },
   "prices": [
     500,
     1000,
@@ -19,125 +32,149 @@
     1000000
   ],
   "questions": [
-      {
-          "question": "How many countries are part of Scandinavia?",
-          "answers": [
-              "2",
-              "3",
-              "4",
-              "5"
-          ],
-          "correctAnswers": 1
-      },
-      {
-          "question": "Which animal has the largest eyes?",
-          "answers": [
-              "Elephant",
-              "Giraffe",
-              "Owl",
-              "Ostrich"
-          ],
-          "correctAnswers": 3
-      },
-      {
-          "question": "Which human lung holds more air?",
-          "answers": [
-              "Left",
-              "Right",
-              "Same",
-              "Individually"
-          ],
-          "correctAnswers": 1
-      },
-      {
-          "question": "Which of the Canary Islands is the largest?",
-          "answers": [
-              "Tenerife",
-              "Lobos",
-              "Alegranza",
-              "Lanzarote"
-          ],
-          "correctAnswers": 0
-      },
-      {
-          "question": "Who wrote the Sistine Madonna?",
-          "answers": [
-              "Raphael Santi",
-              "Michelangelo",
-              "Leonardo da Vinci",
-              "Sandro Botticelli"
-          ],
-          "correctAnswers": 0
-      },
-      {
-          "question": "How long is the equator?",
-          "answers": [
-              "17,240km",
-              "40,075km",
-              "30,075km",
-              "38,890km"
-          ],
-          "correctAnswers": 1
-      },
-      {
-          "question": "What animal was the first parachutist?",
-          "answers": [
-              "Chicken",
-              "Pig",
-              "Dog",
-              "Cat"
-          ],
-          "correctAnswers": 3
-      },
-      {
-          "question": "What kind of animals are used to guard grain storage facilities in the UK?",
-          "answers": [
-              "Cocks",
-              "Pigs",
-              "Cats",
-              "Dogs"
-          ],
-          "correctAnswers": 2
-      },
-      {
-          "question": "In which country do the tarantella dance?",
-          "answers": [
-              "Spain",
-              "Argentina",
-              "France",
-              "Italy"
-          ],
-          "correctAnswers": 3
-      },
-      {
-          "question": "Which creature has the largest brain in relation to the body?",
-          "answers": [
-              "Ant",
-              "Blue whale",
-              "Beaver",
-              "Elephant"
-          ],
-          "correctAnswers": 0
-      },
-      {
-          "question": "What number means Roman XC?",
-          "answers": [
-              "190",
-              "70",
-              "90",
-              "900"
-          ],
-          "correctAnswers": 2
-      },
-      {
-          "question": "Which of the American states has the largest area?",
-          "answers": [
-              "Texas",
-              "Alaska",
-              "Florida",
-              "California"
-          ],
-          "correctAnswers": 1
-      }
+    {
+      "text": "How many countries are part of Scandinavia?",
+      "answers": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswersIndexes": [
+        1
+      ]
+    },
+    {
+      "text": "Which animal has the largest eyes?",
+      "answers": [
+        "Elephant",
+        "Giraffe",
+        "Owl",
+        "Ostrich"
+      ],
+      "correctAnswersIndexes": [
+        3
+      ]
+    },
+    {
+      "text": "Which human lung holds more air?",
+      "answers": [
+        "Left",
+        "Right",
+        "Same",
+        "Individually"
+      ],
+      "correctAnswersIndexes": [
+        1
+      ]
+    },
+    {
+      "text": "Which of the Canary Islands is the largest?",
+      "answers": [
+        "Tenerife",
+        "Lobos",
+        "Alegranza",
+        "Lanzarote"
+      ],
+      "correctAnswersIndexes": [
+        0
+      ]
+    },
+    {
+      "text": "Who wrote the Sistine Madonna?",
+      "answers": [
+        "Raphael Santi",
+        "Michelangelo",
+        "Leonardo da Vinci",
+        "Sandro Botticelli"
+      ],
+      "correctAnswersIndexes": [
+        0
+      ]
+    },
+    {
+      "text": "How long is the equator?",
+      "answers": [
+        "17,240km",
+        "40,075km",
+        "30,075km",
+        "38,890km"
+      ],
+      "correctAnswersIndexes": [
+        1
+      ]
+    },
+    {
+      "text": "What animal was the first parachutist?",
+      "answers": [
+        "Chicken",
+        "Pig",
+        "Dog",
+        "Cat"
+      ],
+      "correctAnswersIndexes": [
+        3
+      ]
+    },
+    {
+      "text": "What kind of animals are used to guard grain storage facilities in the UK?",
+      "answers": [
+        "Cocks",
+        "Pigs",
+        "Cats",
+        "Dogs"
+      ],
+      "correctAnswersIndexes": [
+        2
+      ]
+    },
+    {
+      "text": "In which country do the tarantella dance?",
+      "answers": [
+        "Spain",
+        "Argentina",
+        "France",
+        "Italy"
+      ],
+      "correctAnswersIndexes": [
+        3
+      ]
+    },
+    {
+      "text": "Which creature has the largest brain in relation to the body?",
+      "answers": [
+        "Ant",
+        "Blue whale",
+        "Beaver",
+        "Elephant"
+      ],
+      "correctAnswersIndexes": [
+        0
+      ]
+    },
+    {
+      "text": "What number means Roman XC?",
+      "answers": [
+        "190",
+        "70",
+        "90",
+        "900"
+      ],
+      "correctAnswersIndexes": [
+        2
+      ]
+    },
+    {
+      "text": "Which of the American states has the largest area?",
+      "answers": [
+        "Texas",
+        "Alaska",
+        "Florida",
+        "California"
+      ],
+      "correctAnswersIndexes": [
+        1
+      ]
+    }
   ]
 }

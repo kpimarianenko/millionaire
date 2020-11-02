@@ -1,14 +1,14 @@
 import React from 'react';
-import { Menu, numberWithCommas } from './Utils';
+import Menu from '../Menu';
+import { strings } from '../../config.json';
+import { numberWithCommas } from '../../helper';
 
 function End(props) {
+  const { end } = strings;
   const earnedMoneyNumber = props.location.state ? props.location.state.earnedMoney : 0;
   const earnedMoney = numberWithCommas(earnedMoneyNumber);
-  const caption = 'Total score:';
-  const title = `$${earnedMoney} earned`;
-  const btnText = 'Try again';
   return (<div className="main menu">
-    <Menu title={title} caption={caption} btnText={btnText} />
+    <Menu title={end.title.replace('{earnedMoney}', earnedMoney)} caption={end.caption} btnText={end.buttonText} />
   </div>);
 }
 
