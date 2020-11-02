@@ -118,9 +118,8 @@
   }
 
   .game {
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0;
   }
 
   .level-panel__wrapper {

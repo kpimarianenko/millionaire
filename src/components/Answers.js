@@ -51,6 +51,7 @@ function Answer({
     setTimeout(() => {
       setIsAnswered(false);
       nextMove(price);
+      setClassName('');
     }, config.beforeNextLevelDelay);
   };
 
