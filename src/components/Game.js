@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom';
 import { BorderItem } from './Utils';
 import Answers from './Answers';
 import { ReactComponent as MoneyBorder } from '../moneyBorder.svg';
+import MenuButton from '../menuButton.svg';
 import { questions } from '../config.json';
 import '../styles/Game.css';
 
@@ -46,6 +47,7 @@ function Game() {
 
 function QuestionPanel({ level, item, increaseLevel, redirectToFinal }) {
   return (<div className="wrapper question-panel">
+    <LevelPanelMobileButton />
     <Question question={item.question} />
     <Answers
       price={level > 0 ? questions[level - 1].price : 0}
@@ -77,6 +79,12 @@ function LevelPanel({ level, maxLevel }) {
 
 function Level({ money, className, ...attrs }) {
   return (<BorderItem Border={MoneyBorder} className={`level-panel__money ${className}`} {...attrs}>{`$${money}`}</BorderItem>);
+}
+
+function LevelPanelMobileButton() {
+  return (<div className="level-panel-button-wrapper">
+    <img src={MenuButton} alt="menuBtn" className="level-panel-button" />
+  </div>);
 }
 
 export default Game;

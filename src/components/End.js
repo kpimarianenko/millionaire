@@ -2,7 +2,8 @@ import React from 'react';
 import { Menu } from './Utils';
 
 function End(props) {
-  const { earnedMoney } = props.location.state;
+  const earnedMoneyNumber = props.location.state ? props.location.state.earnedMoney : 0;
+  const earnedMoney = earnedMoneyNumber.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   const caption = 'Total score:';
   const title = `$${earnedMoney} earned`;
   const btnText = 'Try again';

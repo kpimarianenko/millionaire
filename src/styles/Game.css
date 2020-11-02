@@ -87,6 +87,16 @@
     margin-right: 8px;
 }
 
+.level-panel-button-wrapper {
+  display: none;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.level-panel-button {
+  margin: 20px;
+}
+
 @media screen and (max-width: 1250px) {
     .question-panel__answers {
         grid-row-gap: 16px;
@@ -96,4 +106,30 @@
     .game {
         grid-template-columns: 2fr 1fr;
     }
+}
+
+@media screen and (max-width: 900px) {
+  .game {
+    grid-template-columns: 1fr;
+  }
+
+  .level-panel {
+    display: none;
+  }
+
+  .level-panel-button-wrapper {
+    display: flex;
+  }
+
+  .question-panel__answers {
+    width: 100%;
+    grid-row-gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .question-panel__header {
+    margin: 16px;
+    text-align: center;
+    font-size: 1.45rem;
+  }
 }
