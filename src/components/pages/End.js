@@ -1,7 +1,7 @@
 import React from 'react';
 import Menu from '../Menu';
 import { strings } from '../../config.json';
-import { numberWithCommas } from '../../helper';
+import { numberWithCommas } from '../../helpers';
 
 function End(props) {
   const { end } = strings;

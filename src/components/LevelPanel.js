@@ -2,7 +2,7 @@ import React from 'react';
 import CornerButton from './CornerButton';
 import Level from './Level';
 import CloseButton from '../images/closeButton.svg';
-import { getQuestionsQuantity } from '../helper';
+import { getQuestionsQuantity } from '../helpers';
 import { prices } from '../config.json';
 
 function LevelPanel({ level, show, toggleMobileMenu }) {

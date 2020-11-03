@@ -6,7 +6,6 @@ function AnswersButtons({ answers, correctAnswers, price, increaseLevel, finishG
   const [isAnswered, setIsAnswered] = useState(false);
   const [isHighlight, setIsHighlight] = useState(false);
   const highlightCorrectAnswers = () => setIsHighlight(!isHighlight);
-  // console.log(answers);
   const newAnswers = [];
   for (let i = 0; i < config.maxAnswerQuantity && i < answers.length; i += 1) {
     let isCorrect;

@@ -1,7 +1,7 @@
 import React from 'react';
 import BorderItem from './BorderItem';
 import { ReactComponent as LevelBorder } from '../images/levelBorder.svg';
-import { numberWithCommas } from '../helper';
+import { numberWithCommas } from '../helpers';
 
 function Level({ money, className, ...attrs }) {
   return (<BorderItem

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Redirect } from 'react-router-dom';
-import { getQuestionsQuantity } from '../../helper';
+import { getQuestionsQuantity } from '../../helpers';
 import QuestionPanel from '../QuestionPanel';
 import LevelPanel from '../LevelPanel';
 import { questions, prices } from '../../config.json';
