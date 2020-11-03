@@ -12,9 +12,9 @@ function LevelPanel({ level, show, toggleMobileMenu }) {
   const getClassName = (index) => {
     switch (true) {
       case (index < level):
-        return 'level-panel__money-unactive';
+        return 'level-panel__level-unactive';
       case (index === level):
-        return 'level-panel__money-current';
+        return 'level-panel__level-current';
       default:
         return '';
     }
@@ -28,7 +28,7 @@ function LevelPanel({ level, show, toggleMobileMenu }) {
       key={i} />);
   }
 
-  return (<div className={show ? 'level-panel__wrapper show' : 'level-panel__wrapper'}>
+  return (<div className={show ? 'wrapper__level-panel show' : 'wrapper__level-panel'}>
     <CornerButton img={CloseButton} onClick={toggleMobileMenu} />
     <div className="level-panel">
       {levels}

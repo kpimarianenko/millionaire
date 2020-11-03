@@ -4,18 +4,18 @@ import { Link } from 'react-router-dom';
 
 function Menu({ title, caption, btnText, ...attrs }) {
   return (
-    <div className="wrapper menu__wrapper">
-        <div className="menu__wrapper_image-wrapper">
-          <img src="hand.png" alt="hand" className="menu__wrapper__image" />
+    <div className="wrapper wrapper__menu">
+        <div className="wrapper wrapper__image">
+          <img src="hand.png" alt="hand" className="wrapper__image" />
         </div>
-        <div className="menu__wrapper-inner">
+        <div className="wrapper__menu-inner">
           <div>
-            <h2 className="menu__wrapper__caption">{caption}</h2>
-            <h1 className="menu__wrapper__title">{title}</h1>
+            <h2 className="wrapper__caption">{caption}</h2>
+            <h1 className="wrapper__title">{title}</h1>
           </div>
           <div >
             <Link to="/game">
-              <button {...attrs} className="button">
+              <button {...attrs} className="button wrapper__button">
                 {btnText}
               </button>
             </Link>

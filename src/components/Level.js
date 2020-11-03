@@ -7,7 +7,7 @@ function Level({ money, className, ...attrs }) {
   return (<BorderItem
     {...attrs}
     Border={LevelBorder}
-    className={`level-panel__money ${className}`}>
+    className={`level-panel__level ${className}`}>
     {`$${numberWithCommas(money)}`}
   </BorderItem>);
 }
