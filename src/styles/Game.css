@@ -1,7 +1,7 @@
 .game {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 3fr 1fr;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 3fr 1fr;
 }
 
 .level-panel {
@@ -11,86 +11,88 @@
 }
 
 .question-panel {
-    background-color: #F5F5F7;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  background-color: var(--color-secondary-muted);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .question-panel__header {
-    font-size: 2rem;
+  color: var(--color-text-dark);
+  font-size: 2rem;
 }
 
 .question-panel__answers {
-    width: 90%;
-    display: grid;
-    grid-row-gap: 32px;
-    grid-template-columns: repeat(2, 1fr);
+  width: 90%;
+  display: grid;
+  grid-row-gap: 32px;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .wrapper__level-panel {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .level-panel__level {
-    width: 100%;
-    margin-bottom: 8px;
-    font-size: 1.2rem;
+  color: var(--color-text-dark);
+  width: 100%;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
 }
 
 .level-panel__level-unactive {
-    color: #D0D0D8;
+  color: var(--color-secondary);
 }
 
 .level-panel__level-current {
-    color: #FF8B37;
+  color: var(--color-primary);
 }
 
 .level-panel__level-current .border {
-    stroke: #FF8B37;
+  stroke: var(--color-primary);
 }
 
 .level-panel__level {
-    width: 100%;
-    margin-bottom: 8px;
-    font-size: 1.2rem;
+  width: 100%;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
 }
 
 .level-panel__level .border-item {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .question-panel__answers .border:hover {
-    stroke: #FF8B37;
-    transition: stroke 0.1s;
+  stroke: var(--color-primary);
+  transition: stroke 0.1s;
 }
 
 .border-button-selected .border {
-    stroke: #FF8B37;
-    fill: #FFF3EB;
-    transition: fill 0.2s;
+  stroke: var(--color-primary);
+  fill: var(--color-primary-muted);
+  transition: fill 0.2s;
 }
 
 .border-button-wrong .border {
-    stroke: #EC6259;
-    fill: #FDEEED;
-    transition: fill 0.2s;
+  stroke: var(--color-danger);
+  fill: var(--color-danger-muted);
+  transition: fill 0.2s;
 }
 
 .border-button-correct .border {
-    stroke: #47D867;
-    fill: #E6FAEA;
-    transition: fill 0.2s;
+  stroke: var(--color-success);
+  fill: var(--color-success-muted);
+  transition: fill 0.2s;
 }
 
 .caption__letter {
-    font-weight: 600;
-    color: #FF8B37;
-    margin-right: 8px;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-right: 8px;
 }
 
 .corner-button-wrapper {
@@ -100,17 +102,24 @@
 }
 
 .corner-button {
+  fill: var(--color-text-dark-muted);
+  cursor: pointer;
   margin: 20px;
 }
 
-@media screen and (max-width: 1250px) {
-    .game {
-        grid-template-columns: 2fr 1fr;
-    }
+.corner-button:hover {
+  fill: var(--color-text-dark-tint);
+  transition: fill 0.15s;
+}
 
-    .question-panel {
-      padding: 80px;
-    }
+@media screen and (max-width: 1250px) {
+  .game {
+      grid-template-columns: 2fr 1fr;
+  }
+
+  .question-panel {
+    padding: 80px;
+  }
 }
 
 @media screen and (max-width: 1100px) {
@@ -140,7 +149,7 @@
   .wrapper__level-panel {
     transform: translate(100%);
     transition: transform 0.3s;
-    background-color: #F5F5F7;
+    background-color: var(--color-secondary-muted);
     max-width: 100vw;
     padding-bottom: 1rem;
     width: 100vw;
@@ -181,7 +190,7 @@
   }
 
   .question-panel__answers .border:hover {
-    stroke: #D0D0D8;
+    stroke: var(--color-secondary);
   }
 }
 

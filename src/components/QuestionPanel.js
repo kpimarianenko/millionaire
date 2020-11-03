@@ -2,12 +2,12 @@ import React from 'react';
 import Question from './Question';
 import AnswersButtons from './AnswersButtons';
 import CornerButton from './CornerButton';
-import MenuButton from '../images/menuButton.svg';
+import { ReactComponent as MenuButton } from '../images/menuButton.svg';
 import { prices } from '../config.json';
 
 function QuestionPanel({ level, question, increaseLevel, finishGame, toggleMobileMenu }) {
   return (<div className="wrapper question-panel">
-    <CornerButton img={MenuButton} onClick={toggleMobileMenu} />
+    <CornerButton Image={MenuButton} onClick={toggleMobileMenu} />
     <Question question={question.text} />
     <AnswersButtons
       price={level > 0 ? prices[level - 1] : 0}

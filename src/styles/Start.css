@@ -1,3 +1,3 @@
 .start {
-    background: linear-gradient(to bottom right, #fff 0%, #fff 50%, #FFF3EB 50%, #FFF3EB 100%);
+  background: linear-gradient(to bottom right, var(--color-secondary-tint) 0%, var(--color-secondary-tint) 50%, var(--color-primary-muted) 50%, var(--color-primary-muted) 100%);
 }

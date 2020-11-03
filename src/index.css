@@ -34,11 +34,12 @@ code {
 .border {
   width: 100%;
   height: auto;
-  stroke: #D0D0D8;
-  fill: #FFFFFF;
+  stroke: var(--color-secondary);
+  fill: var(--color-secondary-tint);
 }
 
 .border-button {
+  color: var(--color-text-dark);
   cursor: pointer;
 }
 
@@ -59,25 +60,25 @@ code {
   padding: 20px 120px;
   border: none;
   border-radius: 12px;
-  color: #FFFFFF;
-  background-color: #FF8B37;
+  color: var(--color-text-light);
+  background-color: var(--color-primary);
   font-size: 1.2rem;
   box-sizing: border-box;
   cursor: pointer;
 }
 
 .button a {
-  color: #FFFFFF;
+  color: var(--color-text-light);
   text-decoration: none;
 }
 
 .button:hover {
-  background-color: #FFAC70;
+  background-color: var(--color-primary-tint);
   transition: background-color 0.15s;
 }
 
 .button:active {
-  background-color: #E87928;
+  background-color: var(--color-primary-shade);
   transition: background-color 0.15s;
 }
 

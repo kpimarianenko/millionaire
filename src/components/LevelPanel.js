@@ -1,7 +1,7 @@
 import React from 'react';
 import CornerButton from './CornerButton';
 import Level from './Level';
-import CloseButton from '../images/closeButton.svg';
+import { ReactComponent as CloseButton } from '../images/closeButton.svg';
 import { getQuestionsQuantity } from '../helpers';
 import { prices } from '../config.json';
 
@@ -29,7 +29,7 @@ function LevelPanel({ level, show, toggleMobileMenu }) {
   }
 
   return (<div className={show ? 'wrapper__level-panel show' : 'wrapper__level-panel'}>
-    <CornerButton img={CloseButton} onClick={toggleMobileMenu} />
+    <CornerButton Image={CloseButton} onClick={toggleMobileMenu} />
     <div className="level-panel">
       {levels}
     </div>

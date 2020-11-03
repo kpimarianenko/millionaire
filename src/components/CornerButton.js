@@ -1,8 +1,8 @@
 import React from 'react';
 
-function CornerButton({ img, ...attrs }) {
+function CornerButton({ Image, ...attrs }) {
   return (<div className="corner-button-wrapper">
-    <img {...attrs} src={img} alt="cornerBtn" className="corner-button" />
+    <Image {...attrs} className="corner-button" />
   </div>);
 }
 
