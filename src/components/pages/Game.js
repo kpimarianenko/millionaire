@@ -39,7 +39,7 @@ function Game() {
     if (getQuestionsQuantity() <= 0) setEarnedMoney(0);
   }, []);
 
-  return earnedMoney < 0 ? (<div className="main game">
+  return earnedMoney < 0 ? (<div className={`main game ${showMobilePanel ? 'panel-shown' : ''}`}>
     <QuestionPanel
       level={level}
       question={currentQuestion}
